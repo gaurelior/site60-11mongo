@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+nav {
+ 
+ background:  green;
+/*
+100%     #bf80ff
+70%      #b366ff
+65%      #a64dff
+60%      #9933ff
+55%      #8c1aff
+50%      #8000ff
+45%      #7300e6
+40%      #6600cc
+35%      #5900b3
+30%      #4d0099
+25%      #400080
+20%      #330066
+15%      #26004d
+10%      #1a0033
+5%     #0d001a
+0%     #000000
+*/
+  height: 80px;
+  width: 100%;
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active, a:hover {
+  transition: .5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+.dropbtn {
+  background-color: red;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  }
+
+  .dropbtn:hover, .dropbtn:focus {
+  background-color: #44ff00;
+  }
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  }
+
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+
+  .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  }
+
+  .dropdown a:hover {background-color: #ddd;}
+
+ 
+ 
+  .show {display: block;}
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn {
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover, a.active {
+    backgroun
+    d: none;
+    color: #5434af;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+html, body {
+  height: 100%;
+  width: 100%;
+ }
+
+
+
+ .entire-content {
+    margin: auto; /* Centraliza o elemento */
+    width: 190px; /* Define a largura */
+    perspective: 1000px; /* Altera a perspectiva do elemento, conforme o plano Z */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/perspective */
+    position: relative; /* Deixa o elemento relativo */
+    padding-top: 80px; /* Deixa um espaçamento em cima */
+  }
+
+  .content-carrousel {
+    width: 100%; /* Deixa o carrousel ocupando 100% da tela */
+    position: absolute; /* Deixa o elemento absoluto */
+    float: right; /* Deixa o elemento flutuando para a direita */
+    animation: rotar 40s infinite linear; /* Anima o carrousel para ele rotacionar */
+    transform-style: preserve-3d; /* Deixa o carrousel com efeito 3D */
+  }
+
+  .content-carrousel:hover {
+    animation-play-state: paused; /* Quando passar o mouse em cima, ele pausa a animação */
+    cursor: pointer; /* Quando passar o mouse em cima, ele define o cursor como ponteiro */
+  }
+
+  .content-carrousel figure {
+    width: 200%; /* Deixa a imagem ocupando 100% do slide */
+    height: 200px; /* Deixa a imagem ocupando 100% do slide */
+    border: 5px solid #3b444b; /* Configura uma borda no elemento */
+    overflow: hidden; /* Caso a imagem sobrepor o elemento, a parte que esta sobreposta irá "esconder" */
+    position: absolute; /* Deixa o elemento absoluto */
+  }
+
+
+  /* Posiciona os elementos certinho no carrousel */
+  .content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);  /* Transform: rotatey(0deg) = Rotaciona o elemento 0 graus para cima | Translatez: move o elemento para o Z em uma certa quantidade */
+  }
+  .content-carrousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(300px); 
+  } 
+  .content-carrousel figure:nth-child(10) {
+    transform: rotateY(360deg) translateZ(300px); 
+  } 
+
+  .content-carrousel img {
+    transition: all 300ms; /* Aplica uma transição para o hover */
+    width: 120%; /* Largura */
+    height: 130%; /* Altura */
+  }
+
+  .content-carrousel img:hover { /* Quando passar o mouse em cima da imagem */
+    transform: scale(1.2); /* Ele aumenta a escala da imagem em 110% */
+    transition: all 300ms; /* Aplica uma transição no elemento */
+  }
+#fotosaa{
+
+margin-top: 14%;/*Aplica uma margem de 14% ao topo do elemento*/
+}
+
+  @keyframes rotar { /* Animação de rotacionar o carrousel */
+    from {
+      transform: rotateY(0deg); /* No inicio, o Y da rotação fica em 0 graus */
+    } to {
+      transform: rotateY(360deg); /* No fim, ele termina em 360 graus */
+    }
+  }
+ /* Style the links inside the sidenav */
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  }
+
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }  
+  #primeiro {
+    top: 80px;
+    background-color: red; /* Blue */
+  }
+/*Alinhamento de textos*/
+p{
+  text-align: justify;
+  padding: 40px;
+}
+img.EconoIF{
+ 
+}
+
+dropbtn{
+  color: red;
+}
+
+#docsButton {
+  position: relative;
+  background-color: #0b8b1685 ; /* red */
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor:  grab;
+  outline: none;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+  box-shadow: 0 4fffpx 6px ;
+  margin: 200px;
+
+}
+
+#docsButton:hover {
+  background-color: rgb(204, 172, 112); /* Darker blue */
+}
+
+#square {
+  position: absolute;
+  background-color: rgb(247, 247, 247); /* Red */
+  width: 60%;
+  height: 60%;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+body{
+  background-size: 200px;
+}
+* {
+  box-sizing: border-box;
+}
+/*
+body {
+  margin: 0;
+  font-family: Arial;
+  
+  
+  
+  
+  
+  font-size: 17px;
+}
+  */
+#myVideo {
+  margin-right: 200px;
+  /* margin-left: 30px;
+ margin-right: 30px;
+  min-width: 100%; 
+  min-height: 100%;*/
+}

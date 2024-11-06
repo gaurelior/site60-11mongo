@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="contrato.css">
+    <link rel="icon" type="img" href="img/EconoIF (1).png" />
+
+    <title>EconoIF</title>
+</head>
+
+<body background="img/FUNDOINSC.jpg">
+
+    <script type="text/script" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+    <header>
+        <nav>
+
+            <div>
+                <input type="checkbox" class="checkbox" id="chk">
+                   
+                </label>
+
+
+            </div>
+            <div class="logo">
+                <a href="index.html" style="margin: 30px;"> EconoIF </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+            </ul>
+
+            </div>
+            <br><br>
+        </nav>
+        <div class="form-container">
+            <h1>Formulário de Inscrição</h1>
+            <form action="#" method="POST">
+                <label for="empresa">1. Qual o nome de sua empresa?</label>
+                <input type="text" id="empresa" name="empresa" required>
+    
+                <label for="associada">2. Sua empresa é associada à ACIAC?</label>
+                <select id="associada" name="associada" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                    <option value="nao">Outro</option>
+                </select>
+    
+                <label for="servicos">3. Quais serviços sua empresa oferece?</label>
+                <textarea id="servicos" name="servicos" rows="4" required></textarea>
+    
+                <label for="desconto">4. Qual a porcentagem de desconto sua empresa vai oferecer?</label>
+                <input type="number" id="desconto" name="desconto" min="0" max="100" required>
+    
+                <label for="forma_desconto">5. Como será oferecido esse desconto?</label>
+                <select id="forma_desconto" name="forma_desconto" required>
+                    <option value="imediato">Desconto imediato na hora da compra</option>
+                    <option value="cupom">Desconto via cupom promocional</option>
+                    <option value="especifico">Desconto em produtos ou serviços específicos</option>
+                    <option value="outro">Outro</option>
+                </select>
+    
+                <label for="termos">6. Você aceita os termos de contrato?</label>
+                <div class="termos">
+                    <input type="radio" id="aceito" name="termos" value="aceito" required>
+                    <label for="aceito">Sim, aceito os termos de contrato</label><br>
+                    <input type="radio" id="nao_aceito" name="termos" value="nao_aceito">
+                    <label for="nao_aceito">Não aceito os termos de contrato</label>
+                </div>
+    
+                <label for="observacoes">7. Observações adicionais (se houver):</label>
+                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+    
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+        </div>
+
+
+
+
+</body>
+
+</html>
