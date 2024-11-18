@@ -1,9 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 // Cria uma instância do Express
 const app = express();
+app.use(cors());
 
 // Configura o body-parser para que possamos ler dados em JSON
 app.use(bodyParser.json());
@@ -32,10 +34,15 @@ app.post('/api/inscricao', (req, res) => {
     // Cria um novo documento com os dados da requisição
     const novaInscricao = new Form(req.body);
 
+    console.log("acessei o método app.post");
+
     // Salva os dados no MongoDB
     novaInscricao.save()
         .then(() => res.status(201).send('Inscrição salva com sucesso!'))
-        .catch(err => res.status(500).send('Erro ao salvar inscrição: ' + err));
+        .catch(
+            
+            err => res.status(500).send('Erro ao salvar inscrição: ' + err)
+        );
 });
 
 // Endpoint para obter todas as inscrições (opcional, para visualizar no backend)

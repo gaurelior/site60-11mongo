@@ -23,7 +23,7 @@
 
             <div>
                 <input type="checkbox" class="checkbox" id="chk">
-                   
+
                 </label>
 
 
@@ -44,20 +44,20 @@
             <form action="#" method="POST">
                 <label for="empresa">1. Qual o nome de sua empresa?</label>
                 <input type="text" id="empresa" name="empresa" required>
-    
+
                 <label for="associada">2. Sua empresa é associada à ACIAC?</label>
                 <select id="associada" name="associada" required>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
                     <option value="nao">Outro</option>
                 </select>
-    
+
                 <label for="servicos">3. Quais serviços sua empresa oferece?</label>
                 <textarea id="servicos" name="servicos" rows="4" required></textarea>
-    
+
                 <label for="desconto">4. Qual a porcentagem de desconto sua empresa vai oferecer?</label>
                 <input type="number" id="desconto" name="desconto" min="0" max="100" required>
-    
+
                 <label for="forma_desconto">5. Como será oferecido esse desconto?</label>
                 <select id="forma_desconto" name="forma_desconto" required>
                     <option value="imediato">Desconto imediato na hora da compra</option>
@@ -65,7 +65,7 @@
                     <option value="especifico">Desconto em produtos ou serviços específicos</option>
                     <option value="outro">Outro</option>
                 </select>
-    
+
                 <label for="termos">6. Você aceita os termos de contrato?</label>
                 <div class="termos">
                     <input type="radio" id="aceito" name="termos" value="aceito" required>
@@ -73,15 +73,49 @@
                     <input type="radio" id="nao_aceito" name="termos" value="nao_aceito">
                     <label for="nao_aceito">Não aceito os termos de contrato</label>
                 </div>
-    
+
                 <label for="observacoes">7. Observações adicionais (se houver):</label>
                 <textarea id="observacoes" name="observacoes" rows="4"></textarea>
-    
-                <button type="submit">Enviar Inscrição</button>
+
+                <button id="botaoSubmit" type="button">Enviar Inscrição</button>
+
             </form>
+            </form>
+
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+        
 
+           document.getElementById('botaoSubmit').addEventListener('click', function (event) {
+                alert("acessei");
+                event.preventDefault();
+
+                const formData = {
+                    empresa: document.getElementById('empresa').value,
+                    associada: document.getElementById('associada').value,
+                    servicos: document.getElementById('servicos').value,
+                    desconto: document.getElementById('desconto').value,
+                    forma_desconto: document.getElementById('forma_desconto').value,
+                    termos: document.querySelector('input[name="termos"]:checked').value,
+                    observacoes: document.getElementById('observacoes').value
+                };
+
+                // Envia a requisição POST usando Axios
+                axios.post('http://localhost:3000/api/inscricao', formData)
+                    .then(response => {
+                        alert('Inscrição enviada com sucesso!');
+                        header("location:index.html");
+                        console.log(response.data); // Log da resposta, se necessário
+                        exit();
+                    })
+                    .catch(error => {
+                        console.error('Erro ao enviar inscrição:', error);
+                        alert('Erro ao enviar inscrição.');
+                    });
+            });
+        </script>
 
 
 </body>
