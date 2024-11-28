@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,53 +7,14 @@
     <link rel="stylesheet" href="teste.css">
     <link rel="stylesheet" href="style1.css">
     <link rel="icon" type="image/png" href="img/EconoIF (1).png" />
-    <title>EconoIF</title>
+    <title>Document</title>
 
     <style>
-        /* Estilos Gerais */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Resetando margens e paddings */
+        * {
             margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        h2 {
-            color: #555;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            list-style-type: none;
             padding: 0;
-        }
-
-        ul li {
-            background: #eee;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        #title {
-            transition: color 0.5s ease;
+            box-sizing: border-box;
         }
 
         /* Barra de navegação */
@@ -73,6 +33,11 @@
             text-decoration: none;
             font-size: 24px;
             font-weight: bold;
+        }
+
+        /* Caixa de seleção para menu responsivo */
+        .checkbox {
+            display: none;
         }
 
         /* Links de navegação */
@@ -96,32 +61,120 @@
             background-color: #40916c;  /* Cor verde médio ao passar o mouse */
             border-radius: 5px;
         }
-    </style>
 
+        /* Menu responsivo */
+        @media (max-width: 768px) {
+            /* Exibe o checkbox quando a tela for pequena */
+            .checkbox {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            /* Esconde os links do menu até que o checkbox seja marcado */
+            nav > div:last-child {
+                display: none;
+                width: 100%;
+                background-color: #2d6a4f;  /* Cor do fundo do menu responsivo */
+            }
+
+            /* Quando o checkbox for marcado, exibe os links */
+            .checkbox:checked + div > ul {
+                display: block;
+            }
+
+            /* Alinha os links de navegação para coluna no mobile */
+            ul {
+                display: block;
+                width: 100%;
+            }
+
+            ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            ul li a {
+                padding: 15px;
+            }
+        }
+
+        /* Estilos do corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container principal estilizado e centralizado */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;  /* Centraliza o container horizontalmente */
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Título */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        p strong {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
+
     <!-- Navbar -->
     <header>
         <nav>
+            <div>
+                <input type="checkbox" class="checkbox" id="chk">
+            </div>
+
             <div class="logo">
                 <a href="index.html" style="margin: 30px;">EconoIF</a>
             </div>
 
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <!-- Você pode adicionar outros links aqui -->
-            </ul>
+            <div>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <!-- Outros links podem ser adicionados aqui -->
+                </ul>
+            </div>
         </nav>
     </header>
 
     <!-- Conteúdo da Página -->
     <div class="container">
-        <p><strong>MANUAL DO SITE</strong></p>
+        <h1>MANUAL DO SITE</h1>
         <p>Este site foi desenvolvido para ser informativo, de fácil navegação e com uma interface amigável. A página inicial apresenta um layout clean e intuitivo, com botões interativos que permitem o acesso às demais seções do site.</p>
         <p>O site é composto por duas páginas adicionais. Ao clicar no botão à direita, você será direcionado para a página <strong>"Seja um Parceiro"</strong>, que foi projetada para facilitar a inscrição. Essa página possui um fundo interativo e oferece dois botões principais: um para acessar o <strong>"Contrato de parceria"</strong> e outro para preencher o <strong>"Formulário de inscrição"</strong>. Caso o visitante deseje se tornar parceiro de forma rápida e prática, ele pode preencher o formulário, que está integrado a um banco de dados administrado pelos membros do projeto.</p>
         <p>Além da página de inscrição, o site também conta com uma página de informações detalhadas sobre o projeto, incluindo dados sobre os parceiros, e quem são os autores do projeto entre outras informações relevantes.</p>
     </div>
+
 </body>
 
 </html>
