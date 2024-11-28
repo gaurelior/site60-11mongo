@@ -17,14 +17,15 @@
             box-sizing: border-box;
         }
 
-        /* Barra de navegação */
+        /* Barra de navegação fixa no topo */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: fixed;  /* Fixar a navbar no topo */
+            top: 0;
+            left: 0;
+            right: 0;
             background-color: #2d6a4f;  /* Cor verde escuro de fundo da navbar */
             padding: 10px 20px;
-            width: 100%;
+            z-index: 1000;  /* Garantir que a navbar fique acima de outros elementos */
         }
 
         /* Logo */
@@ -106,7 +107,8 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            padding-top: 80px;  /* Espaçamento para a navbar fixa no topo */
         }
 
         /* Container principal estilizado e centralizado */
@@ -117,7 +119,7 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: justify;  /* Justifica o texto dentro do container */
         }
 
         /* Título */
@@ -178,3 +180,4 @@
 </body>
 
 </html>
+
