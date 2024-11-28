@@ -23,12 +23,15 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: #2d6a4f;  /* Cor verde escuro de fundo da navbar */
+            background-color: #189d35;  /* Cor verde escuro de fundo da navbar */
             padding: 10px 20px;
             z-index: 1000;  /* Garantir que a navbar fique acima de outros elementos */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Logo */
+        /* Logo alinhada à esquerda */
         .logo a {
             color: #fff;  /* Cor do texto da logo (branco) */
             text-decoration: none;
@@ -59,7 +62,7 @@
         }
 
         ul li a:hover {
-            background-color: #40916c;  /* Cor verde médio ao passar o mouse */
+            background-color: #189d35;  /* Cor verde médio ao passar o mouse */
             border-radius: 5px;
         }
 
@@ -78,7 +81,7 @@
             nav > div:last-child {
                 display: none;
                 width: 100%;
-                background-color: #2d6a4f;  /* Cor do fundo do menu responsivo */
+                background-color: #189d35;  /* Cor do fundo do menu responsivo */
             }
 
             /* Quando o checkbox for marcado, exibe os links */
@@ -152,10 +155,6 @@
     <!-- Navbar -->
     <header>
         <nav>
-            <div>
-                <input type="checkbox" class="checkbox" id="chk">
-            </div>
-
             <div class="logo">
                 <a href="index.html" style="margin: 30px;">EconoIF</a>
             </div>
@@ -180,4 +179,3 @@
 </body>
 
 </html>
-
