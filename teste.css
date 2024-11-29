@@ -48,60 +48,6 @@ nav li a:hover {
     color: black;
 }
 
-/* Estilo para o banner */
-.banner {
-    position: fixed; /* Fixa o banner na tela */
-    left: 20px; /* Coloca o banner 20px da borda esquerda */
-    top: 70%; /* Ajusta a posição para o banner ficar um pouco mais para baixo */
-    transform: translateY(-50%); /* Ajuste para centralizar verticalmente */
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4; /* Cor de fundo suave */
-    border-radius: 10px; /* Bordas arredondadas para um visual mais suave */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
-    z-index: 1000; /* Garante que o banner fique acima dos outros conteúdos */
-}
-
-/* Ajuste do link dentro do banner */
-.imgmanuel a {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #4CAF50; /* Cor de fundo do link */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ao redor do link */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Efeito de hover no link */
-.imgmanuel a:hover {
-    background-color: #45a049; /* Cor de fundo mais escura no hover */
-    transform: translateY(-2px); /* Move o link ligeiramente para cima */
-}
-
-/* Estilo da imagem do manual */
-.imgmanuel img {
-    width: 120px; /* Aumenta a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Bordas arredondadas */
-    transition: transform 0.3s ease; /* Transição suave para efeito de hover */
-}
-
-/* Efeito de hover na imagem */
-.imgmanuel img:hover {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
-}
-
-/* Estilos gerais para a página */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Alinha o conteúdo da página no centro */
-    align-items: flex-start; /* Alinha o conteúdo no topo da página */
-    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
-    background-color: #f0f0f0;
-}
 
 /* A principal estrutura de conteúdo */
 main {
@@ -553,3 +499,39 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+
+
+/* Ajustes no Banner */
+.banner {
+    position: absolute; /* Remove o banner da posição fixa */
+    top: 70%; /* Ajusta a altura do banner */
+    left: 0; /* Deixa o banner na esquerda */
+    width: auto; /* Largura automática */
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Garante que o banner fique acima dos outros conteúdos */
+}
+
+/* Ajuste de centralização do conteúdo restante */
+body {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo no centro da tela */
+    align-items: flex-start; /* Alinha no topo da tela */
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    background-color: #f0f0f0;
+}
+
+/* Ajuste para a navegação */
+nav {
+    width: 100%; /* A navbar ocupa toda a largura da tela */
+    padding: 10px 50px;
+    background-color: #189d35;
+    position: absolute; /* Deixa a navbar no topo */
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
