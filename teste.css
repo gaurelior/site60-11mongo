@@ -48,17 +48,45 @@ nav li a:hover {
     color: black;
 }
 
+/* Estilo para o banner */
 .banner {
-    height: 100vh;
-    background: linear-gradient(hsla(103, 29%, 31%, 0.282), hsla(103, 100%, 78%, 0.282)), url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute; /* Para posicionar no canto esquerdo da página */
+    left: 20px; /* Espaçamento da borda esquerda */
+    top: 50%; /* Posiciona o banner no meio da altura da página */
+    transform: translateY(-50%); /* Ajuste para centralizar verticalmente */
     text-align: center;
+    margin-top: 20px;
 }
+
+/* Estilo para o link dentro do banner */
+.imgmanuel a {
+    display: inline-block;
+    padding: 15px; /* Aumenta o padding para dar mais espaçamento */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #4CAF50; /* Cor de fundo mais vibrante */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
+}
+
+/* Efeito de hover no link */
+.imgmanuel a:hover {
+    background-color: #45a049; /* Cor de fundo mais escura no hover */
+    transform: translateY(-3px); /* Sobe ligeiramente com o efeito de hover */
+}
+
+/* Estilo para a imagem do manual */
+.imgmanuel img {
+    width: 150px;  /* Ajusta a largura da imagem */
+    height: auto;  /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada na imagem */
+    transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+/* Efeito de hover na imagem */
+.imgmanuel img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
 
 .texto .titulo {
     color: #fff;
