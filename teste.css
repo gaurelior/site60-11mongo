@@ -48,66 +48,17 @@ nav li a:hover {
     color: black;
 }
 
-
-/* A principal estrutura de conteúdo */
-main {
-    width: 100%;
-    max-width: 1200px; /* Garante que o conteúdo tenha uma largura máxima */
-    padding: 20px;
-    text-align: center;
-    background-color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Navegação e outros itens */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.banner {
+    height: 100vh;
+    background: linear-gradient(hsla(103, 29%, 31%, 0.282), hsla(103, 100%, 78%, 0.282)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-}
-
-
-/* Estilo para o título e subtítulo */
-.texto .titulo, .texto .sub_titulo {
-    color: #333; /* Cor do texto */
-    font-family: 'Arial', sans-serif; /* Fonte para os textos */
-}
-
-/* Estilo para os botões */
-.botoes a {
-    display: inline-block;
-    margin: 10px;
-}
-
-.overlay {
-    background-color: #4CAF50; /* Cor de fundo do botão */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição de cor e transformação */
-}
-
-.overlay:hover {
-    background-color: #45a049; /* Cor de fundo mais escura no hover */
-    transform: translateY(-3px); /* Move o botão para cima ao passar o mouse */
-}
-
-
 
 .texto .titulo {
     color: #fff;
@@ -499,39 +450,3 @@ nav {
     height: 100%;
     object-fit: cover;
 }
-
-
-/* Ajustes no Banner */
-.banner {
-    position: absolute; /* Remove o banner da posição fixa */
-    top: 70%; /* Ajusta a altura do banner */
-    left: 0; /* Deixa o banner na esquerda */
-    width: auto; /* Largura automática */
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4; /* Cor de fundo suave */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    z-index: 1000; /* Garante que o banner fique acima dos outros conteúdos */
-}
-
-/* Ajuste de centralização do conteúdo restante */
-body {
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo no centro da tela */
-    align-items: flex-start; /* Alinha no topo da tela */
-    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
-    background-color: #f0f0f0;
-}
-
-/* Ajuste para a navegação */
-nav {
-    width: 100%; /* A navbar ocupa toda a largura da tela */
-    padding: 10px 50px;
-    background-color: #189d35;
-    position: absolute; /* Deixa a navbar no topo */
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
-
