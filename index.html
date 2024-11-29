@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="icon" type="img" href="img/EconoIF (1).png" />
+
     <title>EconoIF</title>
 
     <style>
-        /* Estilo para o banner */
+        /* Ajuste da classe .banner para ficar no canto esquerdo da página */
         .banner {
-            position: fixed; /* Fixa o banner na tela */
-            left: 20px; /* Espaçamento da borda esquerda */
-            top: 50%; /* Posiciona o banner no meio da altura da página */
-            transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+            position: absolute; /* Fixa o banner de forma absoluta */
+            left: 20px; /* Distância da borda esquerda da tela */
+            top: 50%; /* Posiciona o banner no meio da tela */
+            transform: translateY(-50%); /* Centraliza verticalmente */
             text-align: center;
             padding: 20px;
             max-width: 400px; /* Largura máxima do banner */
             background-color: #f4f4f4; /* Cor de fundo suave */
-            border-radius: 10px; /* Bordas arredondadas */
+            border-radius: 10px; /* Borda arredondada */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            z-index: 1000; /* Garante que o banner fique acima dos outros conteúdos */
         }
 
-        /* Estilo para o link dentro do banner */
         .imgmanuel a {
             display: inline-block;
-            padding: 10px; /* Espaçamento ao redor do link */
-            border-radius: 8px; /* Bordas arredondadas */
+            padding: 10px;
+            border-radius: 8px;
             background-color: #4CAF50; /* Cor de fundo do link */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ao redor do link */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        /* Efeito de hover no link */
         .imgmanuel a:hover {
             background-color: #45a049; /* Cor de fundo mais escura no hover */
-            transform: translateY(-2px); /* Levanta o link ao passar o mouse */
+            transform: translateY(-2px); /* Move o link ligeiramente para cima */
         }
 
-        /* Estilo para a imagem do manual */
         .imgmanuel img {
             width: 180px; /* Aumenta a largura da imagem */
             height: auto; /* Mantém a proporção da imagem */
@@ -48,65 +47,16 @@
             transition: transform 0.3s ease; /* Efeito de transição para o hover */
         }
 
-        /* Efeito de hover na imagem */
         .imgmanuel img:hover {
-            transform: scale(1.1); /* Aumenta a imagem quando o mouse passa sobre ela */
-        }
-
-        /* Estilo para os títulos */
-        .texto .titulo,
-        .texto .sub_titulo {
-            color: #333; /* Cor de texto */
-            font-family: 'Arial', sans-serif; /* Fonte simples */
-        }
-
-        /* Estilo para os botões dentro do banner */
-        .botoes a {
-            display: inline-block;
-            margin: 10px;
-        }
-
-        /* Estilo para os botões */
-        .overlay {
-            background-color: #4CAF50; /* Cor de fundo do botão */
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
-        }
-
-        /* Efeito de hover no botão */
-        .overlay:hover {
-            background-color: #45a049; /* Cor de fundo mais escura no hover */
-            transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
-        }
-
-        /* Centralizando o conteúdo da página */
-        body {
-            margin-left: 420px; /* Deixe um espaço à esquerda para o banner fixo */
-            display: block; /* Garante que o body seja um bloco para o alinhamento */
-            text-align: center; /* Centraliza o conteúdo da página */
-            font-family: Arial, sans-serif;
-        }
-
-        /* Container para o conteúdo principal */
-        .container {
-            padding: 20px;
-        }
-
-        /* Ajuste da largura para o conteúdo principal da página */
-        .main-content {
-            width: 80%; /* Largura do conteúdo, pode ser ajustada conforme necessário */
-            max-width: 1200px; /* Limita a largura máxima */
-            margin: 0 auto; /* Centraliza o conteúdo */
+            transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
         }
     </style>
-
 </head>
 
 <body>
+
+    <script type="text/script" src="script.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 
     <header>
         <nav>
@@ -143,14 +93,7 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="main-content">
-            <!-- Aqui vai o conteúdo principal da página -->
-            <h1>Bem-vindo ao EconoIF!</h1>
-            <p>Conteúdo da página vai aqui...</p>
-        </div>
-    </div>
-
 </body>
 
 </html>
+
