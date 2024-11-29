@@ -48,58 +48,7 @@ nav li a:hover {
     color: black;
 }
 
-/* Estilo para o banner */
-.banner {
-    position: absolute; /* Para posicionar no canto esquerdo da página */
-    left: 20px; /* Espaçamento da borda esquerda */
-    top: 50%; /* Posiciona o banner no meio da altura da página */
-    transform: translateY(-50%); /* Ajuste para centralizar verticalmente */
-    text-align: center;
-    margin-top: 20px;
-}
 
-/* Estilo para o banner */
-.banner {
-    position: absolute; /* Posiciona o banner de forma absoluta na página */
-    left: 20px; /* Coloca o banner 20px da borda esquerda */
-    top: 50%; /* Posiciona o banner no meio da altura da página */
-    transform: translateY(-50%); /* Ajusta a posição verticalmente */
-    text-align: center;
-    padding: 20px;
-    max-width: 400px; /* Define a largura máxima do banner */
-    background-color: #f4f4f4; /* Cor de fundo suave */
-    border-radius: 10px; /* Borda arredondada */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
-}
-
-/* Estilo para o link dentro do banner */
-.imgmanuel a {
-    display: inline-block;
-    padding: 10px; /* Espaçamento ao redor do link */
-    border-radius: 8px; /* Borda arredondada no link */
-    background-color: #4CAF50; /* Cor de fundo verde */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ao redor do link */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
-}
-
-/* Efeito de hover no link */
-.imgmanuel a:hover {
-    background-color: #45a049; /* Cor de fundo mais escura no hover */
-    transform: translateY(-2px); /* Move o link ligeiramente para cima */
-}
-
-/* Estilo para a imagem do manual */
-.imgmanuel img {
-    width: 180px; /* Aumenta a largura da imagem */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Borda arredondada na imagem */
-    transition: transform 0.3s ease; /* Efeito de transição para o hover */
-}
-
-/* Efeito de hover na imagem */
-.imgmanuel img:hover {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
-}
 
 /* Estilo para o título e subtítulo */
 .texto .titulo, .texto .sub_titulo {
