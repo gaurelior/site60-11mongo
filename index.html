@@ -8,78 +8,8 @@
     <link rel="stylesheet" href="teste.css">
     <link rel="stylesheet" href="style1.css">
     <link rel="icon" type="img" href="img/EconoIF (1).png" />
+
     <title>EconoIF</title>
-
-    <style>
-        /* Estilo para o banner */
-        .banner {
-            position: fixed; /* Fixa o banner na tela */
-            left: 20px; /* Espaçamento da borda esquerda */
-            top: 50%; /* Posiciona o banner no meio da altura da página */
-            transform: translateY(-50%); /* Ajuste para centralizar verticalmente */
-            text-align: center;
-            padding: 10px;
-            max-width: 150px; /* Largura máxima do banner para deixar menor */
-            background-color: #f4f4f4; /* Cor de fundo suave */
-            border-radius: 10px; /* Borda arredondada */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            z-index: 1000; /* Garante que o banner fique acima dos outros conteúdos */
-        }
-
-        /* Ajuste do link dentro do banner */
-        .imgmanuel a {
-            display: inline-block;
-            padding: 10px;
-            border-radius: 8px;
-            background-color: #4CAF50; /* Cor de fundo do link */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ao redor do link */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        /* Efeito de hover no link */
-        .imgmanuel a:hover {
-            background-color: #45a049; /* Cor de fundo mais escura no hover */
-            transform: translateY(-2px); /* Move o link ligeiramente para cima */
-        }
-
-        /* Estilo da imagem do manual */
-        .imgmanuel img {
-            width: 120px; /* Reduz a largura da imagem */
-            height: auto; /* Mantém a proporção da imagem */
-            border-radius: 8px; /* Bordas arredondadas */
-            transition: transform 0.3s ease; /* Transição suave para efeito de hover */
-        }
-
-        /* Efeito de hover na imagem */
-        .imgmanuel img:hover {
-            transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
-        }
-
-        /* Estilo do conteúdo da página */
-        .container {
-            padding: 20px;
-            margin-left: 200px; /* Cria espaço à esquerda para o banner */
-            width: calc(100% - 200px); /* Garante que o conteúdo ocupe o restante da largura da tela */
-            text-align: center; /* Centraliza o conteúdo */
-        }
-
-        /* Ajuste de botão */
-        .overlay {
-            background-color: #4CAF50; /* Cor de fundo do botão */
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        /* Efeito de hover nos botões */
-        .overlay:hover {
-            background-color: #45a049; /* Cor de fundo mais escura no hover */
-            transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
-        }
-    </style>
 </head>
 
 <body>
@@ -89,46 +19,49 @@
 
     <header>
         <nav>
+
+        
             <div class="logo">
                 <a href="index.html" style="margin: 30px;"> EconoIF </a>
             </div>
+
             <div>
-                <ul>
-                    <li><a href="index.html">Página Inicial</a></li>
-                </ul>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+            </ul>
+
             </div>
+           
         </nav>
-    </header>
+       
+        
+        <section class="banner">
+    <div class="imgmanuel">
+       <a href="manual.html"><img src="img/file (6).png" style="width: 100px; height: 90px;"></a>         
+            </div>
 
-    <section class="banner">
-        <div class="imgmanuel">
-            <a href="manual.html">
-                <img src="img/file (6).png" alt="Imagem do Manual">
-            </a>
-        </div>
-        <div class="texto">
-            <h1 class="titulo"></h1>
-            <h2 class="sub_titulo"></h2>
-            <center>
-                <div class="botoes">
-                    <figure>
-                        <img src="img/econoif2.png" style="width: 380px; height: 380px;" />
-                    </figure>
-                    <br>
-                    <a href="sobre.html"><button class="overlay">Sobre o EconoIF</button></a>
-                    <a href="parceiros.html"><button class="overlay">Seja um Parceiro</button></a>
-                </div>
+
+            
+            <div class="texto">
+                <h1 class="titulo"></h1>
+                <h2 class="sub_titulo"></h2>
+            
+                <center>
+                    <div class="botoes">
+                        <figure>
+                            <img src="img/econoif2.png" style="width: 380px; height: 380px;" />
+                        </figure>
+                        <br>
+                        <a href="sobre.html"> <button class="overlay">Sobre o EconoIF</button></a>
+                        <a href="parceiros.html"><button class="overlay">Seja um Parceiro</button> </a>
+                    </div>
+            </div>
             </center>
-        </div>
-    </section>
+        </section>
 
-    <div class="container">
-        <!-- Conteúdo da página -->
-        <h1>Bem-vindo ao EconoIF!</h1>
-        <p>Conteúdo da página vai aqui...</p>
-    </div>
+
+
 
 </body>
 
 </html>
-
