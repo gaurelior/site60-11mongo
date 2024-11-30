@@ -1,177 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="teste.css">
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="contrato.css">
-    <link rel="icon" type="image/png" href="img/EconoIF (1).png" />
-    <title>EconoIF</title>
-
+    <title>Formulário de Inscrição</title>
     <style>
-        /* Resetando margens e paddings */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Barra de navegação */
-        nav {
-            position: fixed;  /* Fixar a navbar no topo */
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #2d6a4f;  /* Cor verde escuro de fundo da navbar */
-            padding: 10px 20px;
-            z-index: 1000;  /* Garantir que a navbar fique acima de outros elementos */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Logo alinhada à esquerda */
-        .logo a {
-            color: #fff;  /* Cor do texto da logo (branco) */
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Caixa de seleção para menu responsivo */
-        .checkbox {
-            display: none;
-        }
-
-        /* Links de navegação */
-        ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        ul li {
-            margin-left: 20px;
-        }
-
-        ul li a {
-            color: #fff;  /* Cor do texto dos links (branco) */
-            text-decoration: none;
-            font-size: 16px;
-            padding: 10px;
-        }
-
-        ul li a:hover {
-            background-color: #fff;  /* Cor verde médio ao passar o mouse */
-            border-radius: 5px;
-        }
-
-        /* Menu responsivo */
-        @media (max-width: 768px) {
-            /* Exibe o checkbox quando a tela for pequena */
-            .checkbox {
-                display: block;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                z-index: 1000;
-            }
-
-            /* Exibe os links do menu quando o checkbox for marcado */
-            nav > div:last-child {
-                display: none;
-                width: 100%;
-                background-color: #2d6a4f;  /* Cor do fundo do menu responsivo */
-            }
-
-            /* Quando o checkbox for marcado, exibe os links */
-            .checkbox:checked + div > ul {
-                display: block;
-            }
-
-            /* Alinha os links de navegação para coluna no mobile */
-            ul {
-                display: block;
-                width: 100%;
-            }
-
-            ul li {
-                margin: 10px 0;
-                text-align: center;
-            }
-
-            ul li a {
-                padding: 15px;
-            }
-        }
-
-        /* Estilos do corpo da página */
+        /* Estilo geral */
         body {
             font-family: Arial, sans-serif;
-            background-color: #2d6a4f;
             margin: 0;
             padding: 0;
-            padding-top: 80px;  /* Espaçamento para a navbar fixa no topo */
+            background-color: #f3f9f1;
+            color: #2d402d;
         }
 
-        /* Formulário de Inscrição */
+        header {
+            background-color: #2d7d46;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .logo a {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Estilo do formulário */
         .form-container {
-            max-width: 800px;
-            margin: 0 auto;  /* Centraliza o container horizontalmente */
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            background: #eaf4e7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            font-size: 2em;
-            color: #333;
-            margin-bottom: 20px;
+        .form-container h1 {
+            text-align: center;
+            color: #2d7d46;
         }
 
         label {
-            display: block;
-            margin-top: 15px;
             font-weight: bold;
+            margin-top: 10px;
+            display: block;
         }
 
-        input, select, textarea {
+        input, select, textarea, button {
             width: 100%;
             padding: 10px;
             margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #a8d5a4;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #2d7d46;
+            outline: none;
+            box-shadow: 0 0 5px rgba(45, 125, 70, 0.5);
         }
 
         button {
-            background-color: #2d6a4f;
+            background-color: #2d7d46;
             color: white;
-            padding: 15px;
-            font-size: 18px;
+            font-size: 1em;
             border: none;
-            margin-top: 20px;
-            width: 100%;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #40916c;
+            background-color: #256639;
+        }
+
+        .termos {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
-
-<body background="img/FUNDOINSC.jpg">
-
-    <script type="text/javascript" src="script.js"></script>
-    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-
-    <!-- Navbar -->
+<body>
     <header>
-              <nav>
+        <nav>
             <div class="logo">
                 <a href="index.html">EconoIF</a>
             </div>
@@ -180,33 +118,33 @@
                 <li><a href="manual.html">Manual</a></li>
                 <li><a href="sobre.html">Lojas Parceiras</a></li>
                 <li><a href="parceiros.html">Seja um Parceiro</a></li>
-  <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Formulário de Inscrição -->
     <div class="form-container">
         <h1>Formulário de Inscrição</h1>
-        <form action="#" method="POST">
+        <form id="inscricaoForm" method="POST">
             <label for="empresa">1. Qual o nome de sua empresa?</label>
-            <input type="text" id="empresa" name="empresa" required>
+            <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
 
             <label for="associada">2. Sua empresa é associada à ACIAC?</label>
             <select id="associada" name="associada" required>
+                <option value="" disabled selected>Selecione</option>
                 <option value="sim">Sim</option>
                 <option value="nao">Não</option>
-                <option value="nao">Outro</option>
             </select>
 
             <label for="servicos">3. Quais serviços sua empresa oferece?</label>
-            <textarea id="servicos" name="servicos" rows="4" required></textarea>
+            <textarea id="servicos" name="servicos" rows="4" placeholder="Descreva os serviços oferecidos" required></textarea>
 
             <label for="desconto">4. Qual a porcentagem de desconto sua empresa vai oferecer?</label>
-            <input type="number" id="desconto" name="desconto" min="0" max="100" required>
+            <input type="number" id="desconto" name="desconto" min="0" max="100" placeholder="Digite um valor entre 0 e 100" required>
 
             <label for="forma_desconto">5. Como será oferecido esse desconto?</label>
             <select id="forma_desconto" name="forma_desconto" required>
+                <option value="" disabled selected>Selecione</option>
                 <option value="imediato">Desconto imediato na hora da compra</option>
                 <option value="cupom">Desconto via cupom promocional</option>
                 <option value="especifico">Desconto em produtos ou serviços específicos</option>
@@ -216,22 +154,44 @@
             <label for="termos">6. Você aceita os termos de contrato?</label>
             <div class="termos">
                 <input type="radio" id="aceito" name="termos" value="aceito" required>
-                <label for="aceito">Sim, aceito os termos de contrato</label><br>
+                <label for="aceito">Sim</label>
                 <input type="radio" id="nao_aceito" name="termos" value="nao_aceito">
-                <label for="nao_aceito">Não aceito os termos de contrato</label>
+                <label for="nao_aceito">Não</label>
             </div>
 
             <label for="observacoes">7. Observações adicionais (se houver):</label>
-            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+            <textarea id="observacoes" name="observacoes" rows="4" placeholder="Digite suas observações"></textarea>
 
-            <button id="botaoSubmit" type="button">Enviar Inscrição</button>
+            <button id="botaoSubmit" type="submit">Enviar Inscrição</button>
         </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-        // Lógica de envio da inscrição via Axios, conforme seu código anterior
-    </script>
+        document.getElementById('inscricaoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
+            const formData = {
+                empresa: document.getElementById('empresa').value,
+                associada: document.getElementById('associada').value,
+                servicos: document.getElementById('servicos').value,
+                desconto: document.getElementById('desconto').value,
+                forma_desconto: document.getElementById('forma_desconto').value,
+                termos: document.querySelector('input[name="termos"]:checked').value,
+                observacoes: document.getElementById('observacoes').value
+            };
+
+            axios.post('http://localhost:3000/api/inscricao', formData)
+                .then(response => {
+                    alert('Inscrição enviada com sucesso!');
+                    // Redireciona o usuário para a página inicial após o envio
+                    window.location.href = 'index.html';
+                })
+                .catch(error => {
+                    console.error('Erro ao enviar inscrição:', error);
+                    alert('Erro ao enviar inscrição. Por favor, tente novamente.');
+                });
+        });
+    </script>
 </body>
 </html>
