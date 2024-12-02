@@ -204,7 +204,7 @@
                 observacoes: document.getElementById('observacoes').value
             };
 
-            axios.post('http://localhost:3000/api/inscricao', formData)
+            axios.post('https://renderpfc.onrender.com/api/inscricao', formData)
                 .then(response => {
                     alert('Inscrição enviada com sucesso!');
                     // Redireciona o usuário para a página inicial após o envio
