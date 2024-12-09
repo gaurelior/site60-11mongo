@@ -11,7 +11,7 @@ body {
 }
 nav {
  
- background:  green;
+ background:  #189d35;
 /*
 100%     #bf80ff
 70%      #b366ff
@@ -83,7 +83,7 @@ a.active, a:hover {
   }
 
   .dropbtn:hover, .dropbtn:focus {
-  background-color: #44ff00;
+  background-color:#189d35;
   }
 
   .dropdown {
@@ -281,7 +281,7 @@ dropbtn{
 
 #docsButton {
   position: relative;
-  background-color: #0b8b1685 ; /* red */
+  background-color:#189d35  ; /* red */
   color: #fff;
   font-size: 20px;
   padding: 5px 28px;
