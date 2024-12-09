@@ -17,6 +17,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 /* Logo alinhada à esquerda */
@@ -40,6 +41,23 @@ ul {
 
 ul li {
     margin-left: 20px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+nav ul {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav li a {
+    font-family: 'Poppins', sans-serif;
+
 }
 
 nav li a {
