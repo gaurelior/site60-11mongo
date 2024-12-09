@@ -1,4 +1,4 @@
-/* Estilo Geral */
+/* Estilo Geral
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -6,13 +6,8 @@ body {
     color: #2e5d3b;
 }
 
-/* Sessão Sobre */
-.sobre {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e8f5e9;
-}
-
+ 
+*/
 .sobre h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -87,7 +82,7 @@ body {
 
 /* Rodapé */
 footer {
-    background-color: #2e7d32;
+    background-color: #189d35;
     color: #ffffff;
     text-align: center;
     padding: 10px 0;

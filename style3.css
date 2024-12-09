@@ -1,0 +1,143 @@
+ /* Resetando margens e paddings */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegação fixa no topo */
+nav {
+    position: fixed;  /* Fixar a navbar no topo */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #189d35;  /* Cor verde escuro de fundo da navbar */
+    padding: 10px 20px;
+    z-index: 1000;  /* Garantir que a navbar fique acima de outros elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo alinhada à esquerda */
+.logo a {
+    color: #fff;  /* Cor do texto da logo (branco) */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Caixa de seleção para menu responsivo */
+.checkbox {
+    display: none;
+}
+
+/* Links de navegação */
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+ }
+ nav li a:hover {
+    color: black; /* Change the color to black on hover */
+}
+
+ul li a:hover {
+    background-color: #fff;  /* Cor verde médio ao passar o mouse */
+    border-radius:5px;
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+    /* Exibe o checkbox quando a tela for pequena */
+    .checkbox {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    /* Esconde os links do menu até que o checkbox seja marcado */
+    nav > div:last-child {
+        display: none;
+        width: 100%;
+        background-color: #189d35;  /* Cor do fundo do menu responsivo */
+    }
+
+    /* Quando o checkbox for marcado, exibe os links */
+    .checkbox:checked + div > ul {
+        display: block;
+    }
+
+    /* Alinha os links de navegação para coluna no mobile */
+    ul {
+        display: block;
+        width: 100%;
+    }
+
+    ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    ul li a {
+        padding: 15px;
+    }
+}
+
+/* Estilos do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;  /* Espaçamento para a navbar fixa no topo */
+}
+
+/* Container principal estilizado e centralizado */
+.container {
+    max-width: 900px;
+    margin: 0 auto;  /* Centraliza o container horizontalmente */
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: justify;  /* Justifica o texto dentro do container */
+}
+
+/* Título */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    color: hwb(0 100% 0%);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+p strong {
+    font-weight: bold;
+}
